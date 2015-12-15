@@ -264,7 +264,7 @@ if __name__ == '__main__':
                                                                           warning=warn,
                                                                           critical=crit)
     else:
-        if options.empty_ok and isinstance(metric_data, list):
+        if options.empty_ok:
             print 'OK: No output from Graphite for target(s): %s' % ', '.join(targets)
             sys.exit(NAGIOS_STATUSES['OK'])
 
